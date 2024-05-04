@@ -8,7 +8,9 @@ struct Node
 	Node* prev;
 
 };
+
 Node* START = NULL;
+
 void addNode()
 {
 	Node* newNode = new Node();
@@ -32,6 +34,7 @@ void addNode()
 		START = newNode;
 
 	}
+
 	else
 	{
 		Node* current = START;
@@ -71,6 +74,7 @@ bool search(int rollNo, Node** previous, Node** current)
 	}
 	return (*current != NULL);
 }
+
 void deleteNode()
 {
 	Node* previous, * current;
@@ -117,10 +121,12 @@ void deleteNode()
 	delete current;
 	cout << "\x1b[32mRecord with roll number " << rollNo << " deleted\x1b[0m" << endl;
 }
+
 bool listEmpty()
 {
 	return (START == NULL);
 }
+
 void traverse()
 {
 	if (listEmpty())
@@ -136,6 +142,8 @@ void traverse()
 		}
 	}
 }
+
+
 void revtraverse()
 {
 	if (listEmpty())
@@ -154,6 +162,7 @@ void revtraverse()
 		}
 	}
 }
+
 void searchData()
 {
 	if (listEmpty() == true)
