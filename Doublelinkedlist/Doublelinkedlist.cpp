@@ -188,6 +188,32 @@ int main()
 			cout << "5. Search for a record in the list" << endl;
 			cout << "6. Exit" << endl;
 			cout << "\nEnter your choice (1-6): ";
+			char ch;
+			cin >> ch;
+
+			switch (ch)
+			{
+			case '1':
+				addNode();
+				break;
+			case '2':
+				deleteNode();
+				break;
+			case '3':
+				traverse();
+				break;
+			case '4':
+				revtraverse();
+				break;
+			case '5':
+				searchData();
+				break;
+			case '6':
+				return 0;
+			default:
+				cout << "\nInvalid option" << endl;
+				break;
+			}
 
 
 
